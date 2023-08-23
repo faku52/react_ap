@@ -8,11 +8,11 @@ export const Filters = () => {
 
   return (
     <div className="filters">
-      <span className="title">Filter Products</span>
+      <span className="title">Filtrar Productos</span>
       <span>
         <Form.Check
           inline
-          label="Ascending"
+          label="Ascendente"
           name="group1"
           type="radio"
           id={`inline-1`}
@@ -21,7 +21,7 @@ export const Filters = () => {
       <span>
         <Form.Check
           inline
-          label="Descending"
+          label="Descendente"
           name="group1"
           type="radio"
           id={`inline-2`}
@@ -30,7 +30,7 @@ export const Filters = () => {
       <span>
         <Form.Check
           inline
-          label="Include Out of Stock"
+          label="Sin stock"
           name="group1"
           type="checkbox"
           id={`inline-3`}
@@ -39,7 +39,7 @@ export const Filters = () => {
       <span>
         <Form.Check
           inline
-          label="Fast Delivery Only"
+          label="Envio Rápido"
           name="group1"
           type="checkbox"
           id={`inline-4`}
@@ -53,7 +53,7 @@ export const Filters = () => {
           style={{ cursor: 'pointer' }}
         />
       </span>
-      <Button variant="light">Clear Filters</Button>
+      <Button variant="light">Eliminar filtros</Button>
     </div>
   );
 };
