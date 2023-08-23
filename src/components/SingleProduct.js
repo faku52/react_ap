@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card } from 'react-bootstrap';
+import { Card, Button } from 'react-bootstrap';
 import { Rating } from '../components/Rating';
 
 export const SingleProduct = ({ prod }) => {
@@ -16,8 +16,15 @@ export const SingleProduct = ({ prod }) => {
             ) : (
               <div> 4 days delivery</div>
             )}
-            <Rating rating={prod.rating} />
+            <Rating rating={prod.ratings} />
           </Card.Subtitle>
+          <Button variant="danger" >
+            Remover del carrito
+          </Button>
+          <Button disabled={ !prod.inStock} >
+            {" "}
+            {!prod.inStock ? "Sin Stock" : "Añadir al carrito"}
+          </Button>
         </Card.Body>
       </Card>
     </div>
