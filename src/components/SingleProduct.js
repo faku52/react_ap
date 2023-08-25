@@ -17,11 +17,11 @@ export const SingleProduct = ({ prod }) => {
         <Card.Body>
           <Card.Title>{prod.name}</Card.Title>
           <Card.Subtitle style={{ paddingBottom: 10 }}>
-            <span> {prod.price.split('.')[0]}</span>
+            <span>$ {prod.price.split('.')[0]}</span>
             { prod.fastDelivery ? (
-              <div>Fast Delivery</div>
+              <div> Envio Rápido</div>
             ) : (
-              <div> 4 days delivery</div>
+              <div> Llega en 4 días</div>
             )}
             <Rating rating={prod.ratings} />
           </Card.Subtitle>

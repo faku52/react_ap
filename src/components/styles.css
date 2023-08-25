@@ -31,3 +31,28 @@
   width: 30%;
   margin: 10px;
 }
+
+.cartitem{
+  display: flex;
+  justify-content:space-between ;
+  align-items: center;
+  margin: 0 20px ;
+  margin-bottom: 20px;
+}
+
+.cartItemImg{
+  border-radius: 5%;
+  width: 75px;
+  height: 75px;
+  object-fit: cover;
+}
+.cartItemDetail{
+  display: flex;
+  flex: 1;
+  padding: 0 20px;
+  flex-direction: column;
+}
+
+.summary{
+  width: 30%;
+}
