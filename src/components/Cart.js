@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Button, Form, ListGroup, ListGroupItem, Row, Col, Image } from 'react-bootstrap';
 import { CartState } from '../context/Context';
 import { Rating } from '../components/Rating';
+import { AiFillDelete } from 'react-icons/ai';
 
 export const Cart = () => {
   const { 
@@ -38,7 +39,20 @@ export const Cart = () => {
                       {[...Array(prod.inStock).keys()].map((x) => (
                         <option key={x+1}>{x+1}</option>
                       ))}
+                    
                     </Form.Control>
+                  </Col>
+                  <Col>
+                    <Button 
+                    type='button'
+                    variant='light'
+                    onClick={() =>
+                      dispatch({
+                        type:"REMOVE_FROM_CART",
+                        payload: prod,
+                      })}
+                    ><AiFillDelete fontSize={"20px"}/>
+                    </Button>
                   </Col>
                 </Row>
               </ListGroupItem>
